@@ -40,6 +40,3 @@ do_install_append_class-native() {
 }
 
 BBCLASSEXTEND = "native"
-
-
-PNBLACKLIST[efivar] ?= "Fails to build with RSS http://errors.yoctoproject.org/Errors/Details/132821/"
