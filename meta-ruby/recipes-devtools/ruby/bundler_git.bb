@@ -20,6 +20,8 @@ PV = "1.9.4"
 
 S = "${WORKDIR}/git"
 
+DEPENDS += "zlib"
+
 SRC_URI = " \
     git://github.com/bundler/bundler.git;branch=${BRANCH} \
     "
@@ -29,5 +31,3 @@ inherit ruby
 RDEPENDS_${PN} = "git"
 
 BBCLASSEXTEND = "native"
-
-PNBLACKLIST[bundler] ?= "Fails to build with RSS http://errors.yoctoproject.org/Errors/Details/130640/"
